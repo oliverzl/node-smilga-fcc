@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./normalize.css" />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Traditional</title>
-  </head>
-  <body>
-    <nav>
-      <div class="nav-center">
-        <h5>HTTP Methods</h5>
-        <div>
-          <a href="index.html">regular </a>
-          <a href="javascript.html">javascript </a>
-        </div>
-      </div>
-    </nav>
-    <main>
-      <form action="/login" method="POST">
-        <h3>Traditional Form</h3>
-        <div class="form-row">
-          <label for="name"> enter name </label>
-          <input type="text" name="name" id="name" autocomplete="false" />
-        </div>
-        <button type="submit" class="block">submit</button>
-      </form>
-    </main>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./normalize.css" />
+		<link rel="stylesheet" href="./styles.css" />
+		<title>Traditional</title>
+	</head>
+	<body>
+		<nav>
+			<div class="nav-center">
+				<h5>HTTP Methods</h5>
+				<div>
+					<a href="index.html">regular </a>
+					<a href="javascript.html">javascript </a>
+				</div>
+			</div>
+		</nav>
+		<main>
+			<!-- in the html way for performing post requests, we need to put the method inside whichever element we want the post requests to be in.  -->
+			<!-- the form will route to /login on submit -->
+			<form action="/login" method="POST">
+				<h3>Traditional Form</h3>
+				<div class="form-row">
+					<label for="name"> enter name </label>
+					<!-- name = name means that in the request body, the property of the req.body will be the VALUE of this name attribute in the input. EG: if name = testing, the property name in the req.body will be testing.  -->
+					<input type="text" name="name" id="name" autocomplete="false" />
+					<!-- <input type="text" name="testing" id="name" autocomplete="false" /> -->
+				</div>
+				<button type="submit" class="block">submit</button>
+			</form>
+		</main>
+	</body>
 </html>
